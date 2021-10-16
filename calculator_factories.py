@@ -1,6 +1,8 @@
 import tkinter as tk
 from typing import List, Text
 
+# Setting up all the colors
+
 
 class Colors:
     bg_color = '#242424'
@@ -10,14 +12,18 @@ class Colors:
     clear_btn_color = '#EA4335'
     equals_btn_color = '#4785F4'
 
+# --- WINDOW FRAME --- #
+
 
 def make_root() -> tk.Tk:
     root = tk.Tk()
     root.title('Calculator')
-    root.iconbitmap('D:\py\calculadora\icon.ico')
+    root.iconbitmap('D:\py\calculator\icon.ico')
     root.config(padx=10, pady=10, background=Colors.bg_color)
     root.resizable(False, False)
     return root
+
+# --- WINDOW LABEL --- #
 
 
 def make_label(root) -> tk.Label:
@@ -28,6 +34,8 @@ def make_label(root) -> tk.Label:
 
     label.grid(row=0, column=0, columnspan=5, sticky='news')
     return label
+
+# --- CALCULATOR DISPLAY --- #
 
 
 def make_display(root) -> tk.Entry:
@@ -50,12 +58,14 @@ def display_control_a(event):
     event.widget.icursor('end')
     return 'break'
 
+# --- CALCULATOR BUTTONS --- #
+
 
 def make_buttons(root) -> List[List[tk.Button]]:
     button_texts: List[List[str]] = [
-        ['7', '8', '9', '+', 'C'],
+        ['7', '8', '9', '+', 'AC'],
         ['4', '5', '6', '-', '/'],
-        ['1', '2', '3', '*', '^'],
+        ['1', '2', '3', '*', 'C'],
         ['0', '.', '(', ')', '='],
     ]
 

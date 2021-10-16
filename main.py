@@ -1,5 +1,5 @@
-from calculator_factories import make_buttons, make_display, make_label, make_root
 from calculator_class import Calculator
+from calculator_factories import make_buttons, make_display, make_label, make_root
 
 
 def main():
