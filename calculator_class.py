@@ -95,9 +95,6 @@ class Calculator:
             self.display.insert('end', event.widget['text'])
 
     def add_operators_to_display(self, event=None):
-        numLen = len(self.display.get())
-        self.display.delete(numLen - 1, 'end')
-
         self.display.insert('end', event.widget['text'])
 
     def add_text_to_display(self, event=None):
