@@ -18,7 +18,7 @@ class Colors:
 def make_root() -> tk.Tk:
     root = tk.Tk()
     root.title('Calculator')
-    root.iconbitmap(r'D:\py\calculator\icon.ico')
+    root.iconbitmap('icon.ico')
     root.config(padx=10, pady=10, background=Colors.bg_color)
     root.resizable(False, False)
     return root
